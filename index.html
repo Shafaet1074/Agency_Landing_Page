@@ -1,0 +1,536 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>agency Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary_1: "#FFA800",
+              primary_2: "#8B7BCF",
+              primary_3: "#FFFFFF",
+            },
+          },
+          fontFamily: {
+            montserrat: ['"Montserrat"', "sans-serif"],
+            parkinsans: ['"Parkinsans"', "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navbar -->
+    <div
+      class="absolute top-0 w-full p-4 flex items-center justify-between bg-black/50 backdrop-blur-md z-10"
+    >
+      <div class="flex gap-2">
+        <img src="/assets/Group.png" alt="Logo" />
+        <p class="text-3xl font-parkinsans">Shadient.co</p>
+      </div>
+
+      <!-- Hamburger Icon (Mobile) -->
+      <div class="block lg:hidden">
+        <button id="hamburger-icon" class="text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-8 h-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navbar Links -->
+      <ul id="navbar-links" class="hidden lg:flex gap-4 text-xl font-medium">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">About</li>
+        <li class="cursor-pointer">Services</li>
+        <button
+          class="px-2 py-2 border-[#FFA800] border-2 text-[#FFA800] rounded-full text-center"
+        >
+          Let’s connect
+        </button>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="lg:hidden absolute top-0 left-0 w-full bg-black/50 backdrop-blur-md z-10 hidden flex-col gap-4 py-8 px-6"
+    >
+      <ul class="flex flex-col gap-4 text-xl font-medium">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">About</li>
+        <li class="cursor-pointer">Services</li>
+        <button
+          class="px-2 py-2 border-[#FFA800] border-2 text-[#FFA800] rounded-full text-center"
+        >
+          Let’s connect
+        </button>
+      </ul>
+    </div>
+
+    <!-- cover pages -->
+    <div
+      class="h-screen flex flex-col md:items-center md:justify-center justify-center bg-[#110F0F] text-white md:px-10 px-10 md:pt-32"
+    >
+      <!-- Blurred Shape (Top-Right) -->
+      <div
+        class="absolute top-0 right-0 w-1/3 md:h-[30%] h-[20%] bg-[#8B7BCF] blur-2xl opacity-90 rounded-full"
+      ></div>
+
+      <!-- Blurred Shape (Bottom-Left) -->
+      <div
+        class="absolute bottom-0 left-0 w-1/3 md:h-[30%] h-[10%] bg-[#EF9364] blur-2xl opacity-90 rounded-full"
+      ></div>
+
+      <div class="space-y-4 md:w-[523px]">
+        <h1 class="md:text-6xl text-3xl font-montserrat font-bold">Attract</h1>
+        <h1
+          class="md:text-6xl text-3xl bg-gradient-to-r from-primary_1 via-primary_2 to-[#9F8CED] bg-clip-text text-transparent font-montserrat font-bold"
+        >
+          NewLeads
+        </h1>
+        <h1 class="md:text-6xl text-3xl font-montserrat font-bold">
+          like never
+        </h1>
+        <h1 class="md:text-6xl text-3xl font-montserrat font-bold">before</h1>
+        <p class="text-xl font-parkinsans">
+          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+          feugiat scelerisque in elit. Morbi rhoncus, tellus, eros
+        </p>
+
+        <!-- Email Input & Button -->
+        <div class="md:flex md:items-center gap-4 mt-4 space-y-4">
+          <input
+            type="email"
+            placeholder="Email"
+            class="px-4 py-2 md:w-80 w-40 text-black rounded-full border-2 border-gray-300 focus:outline-none"
+          />
+          <button
+            class="px-6 py-2 bg-primary_1 text-black font-semibold rounded-full hover:bg-yellow-500"
+          >
+            ATTRACT
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- About agency -->
+    <div class="relative px-16 px-8 md:py-16 py-8 bg-[#000000]">
+      <div class="md:flex md:gap-10 space-y-4">
+        <p class="md:w-1/2 text-4xl font-parkinsans font-semibold">
+          Trusted by 200+ companies around the world
+        </p>
+        <p class="md:w-1/2 font-parkinsans text-sm">
+          Vulputate molestie molestie amet leo blandit accumsan. Sapien sed amet
+          tellus purus sit odio eget. Diam morbi faucibus vitae neque id in.
+          Nullam sed et dapibus nunc, porta enim orci urna, sit. Lectus ac.
+        </p>
+      </div>
+    </div>
+
+    <!-- Offers -->
+    <div class="bg-[#110F0F] md:p-20 p-10 space-y-4 relative font-parkinsans">
+      <p class="md:text-center text-4xl font-bold">We Offer</p>
+      <p class="md:text-center mx-auto text-2xl text-sm md:w-[634px]">
+        Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+        feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna
+        semper orci a tincidunt.
+      </p>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 pt-10">
+        <!-- Card1 -->
+        <div class="border rounded-lg px-4 py-4 space-y-4">
+          <img src="/assets/Frame (2).png" alt="" />
+          <p class="text-xl font-bold">Branding</p>
+          <p class="text-sm">
+            gestas tellus nunc proin amet tellus tincidunt lacus consequat.
+            Ultrices
+          </p>
+        </div>
+
+        <!-- Card1 -->
+        <div class="border rounded-lg px-4 py-4 space-y-4">
+          <img src="/assets/Frame (2).png" alt="" />
+          <p class="text-xl font-bold">Branding</p>
+          <p class="text-sm">
+            gestas tellus nunc proin amet tellus tincidunt lacus consequat.
+            Ultrices
+          </p>
+        </div>
+
+        <!-- Card1 -->
+        <div class="border rounded-lg px-4 py-4 space-y-4">
+          <img src="/assets/Frame (2).png" alt="" />
+          <p class="text-xl font-bold">Branding</p>
+          <p class="text-sm">
+            gestas tellus nunc proin amet tellus tincidunt lacus consequat.
+            Ultrices
+          </p>
+        </div>
+
+        <!-- Card1 -->
+        <div class="border rounded-lg px-4 py-4 space-y-4">
+          <img src="/assets/Frame (2).png" alt="" />
+          <p class="text-xl font-bold">Branding</p>
+          <p class="text-sm">
+            gestas tellus nunc proin amet tellus tincidunt lacus consequat.
+            Ultrices
+          </p>
+        </div>
+
+        <!-- Card1 -->
+        <div class="border rounded-lg px-4 py-4 space-y-4">
+          <img src="/assets/Frame (2).png" alt="" />
+          <p class="text-xl font-bold">Branding</p>
+          <p class="text-sm">
+            gestas tellus nunc proin amet tellus tincidunt lacus consequat.
+            Ultrices
+          </p>
+        </div>
+
+        <!-- Card1 -->
+        <div class="border rounded-lg px-4 py-4 space-y-4">
+          <img src="/assets/Frame (2).png" alt="" />
+          <p class="text-xl font-bold">Branding</p>
+          <p class="text-sm">
+            gestas tellus nunc proin amet tellus tincidunt lacus consequat.
+            Ultrices
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- choose us -->
+
+    <div
+      class="md:flex md:p-20 p-10 bg-[#000000] font-parkinsans gap-5 space-y-4"
+    >
+      <div class="md:w-1/2 w-full">
+        <img src="/assets/searching-2194247-0 (1).png" alt="" />
+      </div>
+      <div class="md:w-1/2 space-y-4 my-auto">
+        <p class="text-4xl font-bold text-">Why choose us</p>
+        <p class="text-sm">
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+        </p>
+        <button
+          class="px-2 py-2 border-[#FFA800] border-2 text-[#FFA800] rounded-full"
+        >
+          Let’s connect
+        </button>
+      </div>
+    </div>
+
+    <!-- Examples of works -->
+
+    <div class="md:flex gap-3 bg-[#110F0F] md:p-20 p-10 space-y-4">
+      <div class="space-y-4 md:w-1/2 space-y-4">
+        <p class="text-4xl font-bold text-">Some pieces of our work</p>
+        <p class="text-sm">
+          Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero
+          facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit.
+          Morbi aliquam porttitor mattis consequat neque, tellus blandit.
+        </p>
+        <button
+          class="px-2 py-2 border-[#FFA800] border-2 text-[#FFA800] rounded-full"
+        >
+          Let’s connect
+        </button>
+      </div>
+      <div class="md:flex gap-2 md:w-1/2">
+        <div class="space-y-4">
+          <!-- Card1 -->
+          <div class="border rounded-lg px-4 py-4 space-y-4">
+            <img src="/assets/Frame (3).png" alt="" />
+            <p
+              class="text-xl px-4 py-2 bg-[#FFA800] rounded-lg w-[100px] text-[#1A365D]"
+            >
+              Website
+            </p>
+            <p class="text-2xl font-medium">Creative landing page</p>
+            <div class="flex gap-2">
+              <p class="text-[#1A365D] font-bold">Read More</p>
+              <img src="/assets/More.png" alt="" />
+            </div>
+          </div>
+
+          <!-- Card1 -->
+          <div class="border rounded-lg px-4 py-4 space-y-4">
+            <p
+              class="text-xl px-4 py-2 bg-[#FFA800] rounded-lg w-[100px] text-[#1A365D]"
+            >
+              Website
+            </p>
+            <p class="text-2xl font-medium">Creative landing page</p>
+            <div class="flex gap-2">
+              <p class="text-[#1A365D] font-bold">Read More</p>
+              <img src="/assets/More.png" alt="" />
+            </div>
+          </div>
+
+          <!-- Card1 -->
+          <div class="border rounded-lg px-4 py-4 space-y-4">
+            <p
+              class="text-xl px-4 py-2 bg-[#FFA800] rounded-lg w-[100px] text-[#1A365D]"
+            >
+              Website
+            </p>
+            <p class="text-2xl font-medium">Creative landing page</p>
+            <div class="flex gap-2">
+              <p class="text-[#1A365D] font-bold">Read More</p>
+              <img src="/assets/More.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Card1 -->
+          <div class="border rounded-lg px-4 py-4 space-y-4">
+            <p
+              class="text-xl px-4 py-2 bg-[#FFA800] rounded-lg w-[100px] text-[#1A365D]"
+            >
+              Website
+            </p>
+            <p class="text-2xl font-medium">Creative landing page</p>
+            <div class="flex gap-2">
+              <p class="text-[#1A365D] font-bold">Read More</p>
+              <img src="/assets/More.png" alt="" />
+            </div>
+          </div>
+
+          <!-- Card1 -->
+          <div class="border rounded-lg px-4 py-4 space-y-4">
+            <img src="/assets/Frame (3).png" alt="" />
+            <p
+              class="text-xl px-4 py-2 bg-[#FFA800] rounded-lg w-[100px] text-[#1A365D]"
+            >
+              Website
+            </p>
+            <p class="text-2xl font-medium">Creative landing page</p>
+            <div class="flex gap-2">
+              <p class="text-[#1A365D] font-bold">Read More</p>
+              <img src="/assets/More.png" alt="" />
+            </div>
+          </div>
+
+          <!-- Card1 -->
+          <div class="border rounded-lg px-4 py-4 space-y-4">
+            <p
+              class="text-xl px-4 py-2 bg-[#FFA800] rounded-lg w-[100px] text-[#1A365D]"
+            >
+              Website
+            </p>
+            <p class="text-2xl font-medium">Creative landing page</p>
+            <div class="flex gap-2">
+              <p class="text-[#1A365D] font-bold">Read More</p>
+              <img src="/assets/More.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer feedback -->
+
+    <div class="bg-black md:space-y-4 md:p-20 p-10 space-y-6">
+      <div class="md:flex md:justify-between md:space-y-4">
+        <p class="text-sm">Hear what our customers say :)</p>
+
+        <div class="md:flex gap-5 md:visible hidden">
+          <img src="/assets/Auto Layout Vertical.png" alt="" />
+          <img src="/assets/Auto Layout Vertical (1).png" alt="" />
+        </div>
+      </div>
+
+      <div class="md:flex gap-2 md:pt-10 space-y-2">
+        <div
+          class="border rounded-lg px-4 py-4 space-y-4 bg-[#0F0F0F] md:w-[400px] md:h-1/2"
+        >
+          <div class="flex gap-2">
+            <img src="/assets/Frame (2).png" alt="" />
+            <div>
+              <p class="text-xl font-bold">Brooklyn Simmons</p>
+              <p class="text-sm">manam</p>
+            </div>
+          </div>
+          <p class="text-sm">
+            Sit ut diam bibendum dolor. Ullamcorper pharetra nibh eget vitae
+            pulvinar. Placerat sapien, dolor, aenean vivamus in tincidunt et.
+            Mauris dolor vestibulum et lacus a ante orci.  
+          </p>
+        </div>
+
+        <div
+          class="border rounded-lg px-4 py-4 space-y-4 bg-[#0F0F0F] md:w-[400px]"
+        >
+          <div class="flex gap-2">
+            <img src="/assets/Frame (2).png" alt="" />
+            <div>
+              <p class="text-xl font-bold">Esther Howard</p>
+              <p class="text-sm">Offmax</p>
+            </div>
+          </div>
+          <p class="text-sm">
+            Vitae tellus bibendum nibh integer auctor pretium sed. Sollicitudin
+            tristique euismod elit.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-lg px-4 py-4 space-y-4 bg-[#0F0F0F] md:w-[400px] h-content"
+        >
+          <div class="flex gap-2">
+            <img src="/assets/Frame (2).png" alt="" />
+            <div>
+              <p class="text-xl font-bold">Arlene McCoy</p>
+              <p class="text-sm">bloopixel</p>
+            </div>
+          </div>
+          <p class="text-sm">
+            Eu eu eget lorem commodo sagittis enim in viverra. Urna egestas
+            ipsum gravida tempor. Libero, consectetur urna in enim magnis. Est.
+          </p>
+        </div>
+
+        <div
+          class="border rounded-lg px-4 py-4 space-y-4 bg-[#0F0F0F] md:w-[400px]"
+        >
+          <div class="flex gap-2">
+            <img src="/assets/Frame (2).png" alt="" />
+            <div>
+              <p class="text-xl font-bold">Jane Cooper</p>
+              <p class="text-sm">unpexel</p>
+            </div>
+          </div>
+          <p class="text-sm">
+            Amet aliquam, volutpat nisl, duis sed at. Vehicula proin consectetur
+            risus dictumst nec amet consequat at tempus. Ornare dapibus nunc
+            fames nibh morbi viverra eu sed mattis.  
+          </p>
+        </div>
+         
+      </div>
+    </div>
+
+    <!-- Discuus -->
+    <div class="bg-[#110F0F] p-10">
+      <div class="p-10 bg-[#FFB219] text-center space-y-4">
+        <p class="text-black text-3xl font-parkinsans font-bold">
+          Let’s discuss the idea
+        </p>
+        <p class="text-sm text-black">
+          Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta
+          feugiat scelerisque in elit.
+        </p>
+
+        <input
+          type="email"
+          placeholder="your email"
+          class="px-4 py-2 md:w-80 w-40 text-black rounded-full border-2 border-gray-300 focus:outline-none"
+        />
+
+        <button
+          class="px-6 py-2 bg-black text-white font-semibold rounded-full hover:bg-yellow-500"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="bg-blue md:flex gap-10 space-y-4 p-10 justify-between">
+      <div class="space-y-4 pb-10">
+        <p class="text-white font-bold">Company</p>
+        <p>About us</p>
+        <p>Team</p>
+        <p>Careers</p>
+      </div>
+
+      <div class="space-y-4 pb-10">
+        <p class="text-white font-bold">Services</p>
+        <p>Branding</p>
+        <p>Web Development</p>
+        <p>Digital Marketing</p>
+        <p>Mobile App</p>
+        <p>SEO</p>
+        <p>User testing</p>
+      </div>
+
+      <div class="space-y-4 pb-10">
+        <p class="text-white font-bold">Resources</p>
+        <p>Blog</p>
+        <p>Case study</p>
+        <p>Testimonials</p>
+      </div>
+
+      <div class="space-y-4 pb-10">
+        <p class="text-white font-bold">Follow us</p>
+        <p>Instagram</p>
+        <p>Figma</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="flex gap-2">
+          <img src="/assets/Group.png" alt="Logo" />
+          <p class="text-3xl font-parkinsans">Shadient.co</p>
+        </div>
+        <p>Get latest updates</p>
+
+        <input
+          type="email"
+          placeholder="your email"
+          class="px-4 py-2 md:w-80 w-40 text-black rounded-full border-2 border-gray-300 focus:outline-none"
+        />
+
+        <button
+          class="px-6 py-2 bg-black text-white font-semibold rounded-full hover:bg-yellow-500"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Toggle hamburger menu visibility
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navbarLinks = document.getElementById("navbar-links");
+
+      hamburgerIcon.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking outside
+      window.addEventListener("click", (e) => {
+        if (
+          !navbarLinks.contains(e.target) &&
+          !hamburgerIcon.contains(e.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
